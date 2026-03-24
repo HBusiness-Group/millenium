@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Millenium LTDA | Assessoria Contábil e Jurídica</title>
+  <meta
+    name="description"
+    content="Assessoria contábil e jurídica com atuação estratégica, atendimento próximo e soluções seguras para empresas e profissionais."
+  />
+  <meta name="theme-color" content="#1a1613" />
+
+  <style>
+    :root {
+      --bg: #f4ede3;
+      --bg-soft: #efe4d5;
+      --paper: #fbf7f1;
+      --ink: #171412;
+      --ink-soft: #4d433b;
+      --brown: #5e4332;
+      --brown-2: #7a5943;
+      --beige: #d6c0a4;
+      --beige-2: #c7ab89;
+      --line: rgba(94, 67, 50, 0.18);
+      --shadow: 0 20px 50px rgba(23, 20, 18, 0.10);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --container: 1180px;
+      --transition: 240ms ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(214, 192, 164, 0.35), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(122, 89, 67, 0.10), transparent 22%),
+        linear-gradient(180deg, #f7f0e7 0%, #f2e9dc 45%, #efe4d5 100%);
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--container));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brown-2);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 36px;
+      height: 1px;
+      background: var(--brown-2);
+      opacity: 0.5;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 7vw, 5.4rem);
+      max-width: 780px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4.5vw, 3.5rem);
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--ink-soft);
+      font-size: 1rem;
+    }
+
+    .lead {
+      font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+      max-width: 720px;
+      color: #3f372f;
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform var(--transition), background var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(180deg, var(--brown-2), var(--brown));
+      color: #fffaf4;
+      box-shadow: 0 14px 35px rgba(94, 67, 50, 0.20);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 18px 42px rgba(94, 67, 50, 0.28);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.55);
+      color: var(--ink);
+      border-color: rgba(94, 67, 50, 0.18);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.78);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(247, 240, 231, 0.72);
+      border-bottom: 1px solid rgba(94, 67, 50, 0.08);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background:
+        linear-gradient(135deg, var(--beige), #b6926f 50%, var(--brown));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.28);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 8px;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .brand-text strong {
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .brand-text span {
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+
+    .nav-links a {
+      font-size: 0.96rem;
+      color: #2b241f;
+      opacity: 0.88;
+      transition: opacity var(--transition), color var(--transition);
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+      color: var(--brown);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 74px 0 44px;
+    }
+
+    .hero-wrap {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .hero-card {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.70), rgba(255,255,255,0.42));
+      border: 1px solid rgba(94, 67, 50, 0.12);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      padding: 30px;
+      min-height: 100%;
+    }
+
+    .hero h1 span {
+      color: var(--brown);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.74);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.6rem;
+      margin-bottom: 4px;
+      color: var(--brown);
+    }
+
+    .hero-panel {
+      position: relative;
+      padding: 28px;
+      min-height: 520px;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(160deg, #1d1815 0%, #2d241f 45%, #4a3629 100%);
+      box-shadow: 0 24px 65px rgba(23,20,18,0.22);
+      overflow: hidden;
+    }
+
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(214,192,164,0.28), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(255,255,255,0.08), transparent 18%);
+      pointer-events: none;
+    }
+
+    .panel-lines {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+      background-size: 38px 38px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,0.45));
+      pointer-events: none;
+    }
+
+    .panel-content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #f7efe7;
+    }
+
+    .panel-badge {
+      align-self: flex-start;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.10);
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .panel-main {
+      margin-top: auto;
+    }
+
+    .panel-main h3 {
+      font-size: clamp(1.9rem, 3vw, 2.8rem);
+      margin-bottom: 12px;
+    }
+
+    .panel-main p {
+      color: rgba(255,255,255,0.78);
+      max-width: 420px;
+    }
+
+    .mini-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .mini-card {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .mini-card small {
+      display: block;
+      color: rgba(255,255,255,0.68);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.72rem;
+    }
+
+    .mini-card strong {
+      font-size: 1rem;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .cards-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      background: rgba(255,255,255,0.70);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition), border-color var(--transition);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(94, 67, 50, 0.24);
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #f0dfca, #dbc0a1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      color: var(--brown);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+    }
+
+    .icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .about-box,
+    .about-panel {
+      background: rgba(255,255,255,0.72);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      padding: 32px;
+    }
+
+    .about-list {
+      margin-top: 24px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .about-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding-top: 14px;
+      border-top: 1px solid rgba(94,67,50,0.10);
+    }
+
+    .about-item:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .check {
+      width: 28px;
+      height: 28px;
+      flex: 0 0 auto;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(122,89,67,0.10);
+      color: var(--brown);
+      margin-top: 1px;
+    }
+
+    .numbers {
+      display: grid;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .number-card {
+      padding: 20px;
+      background: linear-gradient(180deg, #fffaf5, #f4ede4);
+      border: 1px solid rgba(94,67,50,0.12);
+      border-radius: 20px;
+    }
+
+    .number-card strong {
+      font-size: 2rem;
+      color: var(--brown);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .cta {
+      padding: 90px 0;
+    }
+
+    .cta-box {
+      position: relative;
+      overflow: hidden;
+      border-radius: 32px;
+      padding: 42px;
+      background: linear-gradient(135deg, #221b17 0%, #3b2d24 55%, #6e523d 100%);
+      color: #fff6eb;
+      box-shadow: 0 30px 70px rgba(23,20,18,0.22);
+    }
+
+    .cta-box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(214,192,164,0.18), transparent 18%),
+        radial-gradient(circle at 85% 75%, rgba(255,255,255,0.08), transparent 20%);
+      pointer-events: none;
+    }
+
+    .cta-box p {
+      color: rgba(255,246,235,0.80);
+      max-width: 760px;
+    }
+
+    .contact-grid {
+      grid-template-columns: 0.95fr 1.05fr;
+    }
+
+    .contact-card,
+    .contact-form-wrap {
+      background: rgba(255,255,255,0.72);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      padding: 30px;
+    }
+
+    .contact-items {
+      display: grid;
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .contact-item {
+      padding: 18px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.58);
+      border: 1px solid rgba(94,67,50,0.10);
+    }
+
+    .contact-item small {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.72rem;
+      color: var(--brown-2);
+      margin-bottom: 6px;
+    }
+
+    .contact-item a,
+    .contact-item span {
+      font-weight: 700;
+      color: var(--ink);
+      word-break: break-word;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    label {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #2e2722;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(94,67,50,0.16);
+      background: rgba(255,255,255,0.82);
+      color: var(--ink);
+      border-radius: 16px;
+      padding: 15px 16px;
+      font: inherit;
+      outline: none;
+      transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: rgba(122,89,67,0.48);
+      box-shadow: 0 0 0 4px rgba(122,89,67,0.10);
+      background: #fffdfa;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .note {
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      margin-top: 10px;
+    }
+
+    .footer {
+      padding: 24px 0 42px;
+      border-top: 1px solid rgba(94,67,50,0.08);
+    }
+
+    .footer-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      color: #5b4d42;
+      font-size: 0.95rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 700ms ease, transform 700ms ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1024px) {
+      .hero-wrap,
+      .about-wrap,
+      .contact-grid,
+      .cards-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-panel {
+        min-height: 420px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .nav {
+        min-height: 74px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      .hero-card,
+      .hero-panel,
+      .about-box,
+      .about-panel,
+      .contact-card,
+      .contact-form-wrap,
+      .cta-box {
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 22px, var(--container));
+      }
+
+      h1 {
+        font-size: 2.45rem;
+      }
+
+      .hero-stats,
+      .mini-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .btns {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .footer-wrap {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#topo" class="brand" aria-label="Millenium LTDA">
+        <div class="brand-mark"></div>
+        <div class="brand-text">
+          <strong>Millenium LTDA</strong>
+          <span>Assessoria Contábil e Jurídica</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="topo">
+    <section class="hero">
+      <div class="container hero-wrap">
+        <div class="hero-card reveal">
+          <div class="eyebrow">Estratégia, segurança e confiança</div>
+          <h1>
+            Assessoria <span>contábil e jurídica</span> com postura profissional e visão empresarial.
+          </h1>
+          <p class="lead" style="margin-top: 20px;">
+            Soluções pensadas para empresas, empreendedores e profissionais que precisam de organização, respaldo e atendimento de alto nível.
+          </p>
+
+          <div class="btns">
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/5592984869393?text=Olá%2C%20gostaria%20de%20falar%20com%20a%20Millenium%20LTDA."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Falar no WhatsApp
+            </a>
+
+            <a class="btn btn-secondary" href="#contato">
+              Solicitar atendimento
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>Contábil</strong>
+              <p>Organização fiscal, financeira e societária para sustentar decisões com mais clareza.</p>
+            </div>
+            <div class="stat">
+              <strong>Jurídico</strong>
+              <p>Orientação estratégica com mais segurança para contratos, rotinas e proteção empresarial.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel reveal">
+          <div class="panel-lines"></div>
+          <div class="panel-content">
+            <div class="panel-badge">Atendimento com discrição e seriedade</div>
+
+            <div class="panel-main">
+              <h3>Elegância institucional com presença digital forte.</h3>
+              <p>
+                Um escritório que comunica credibilidade desde o primeiro contato, com linguagem sóbria, moderna e profissional.
+              </p>
+
+              <div class="mini-cards">
+                <div class="mini-card">
+                  <small>Atuação</small>
+                  <strong>Assessoria contábil, jurídica e suporte estratégico</strong>
+                </div>
+                <div class="mini-card">
+                  <small>Contato direto</small>
+                  <strong>WhatsApp para atendimento rápido e relacionamento próximo</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Serviços</div>
+          <h2>Soluções estruturadas para quem busca segurança e organização.</h2>
+          <p class="lead">
+            O site já nasce com uma apresentação institucional forte, valorizando autoridade, clareza e confiança.
+          </p>
+        </div>
+
+        <div class="grid cards-3">
+          <article class="card reveal">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 19h16"></path>
+                <path d="M5 16V5.5A1.5 1.5 0 0 1 6.5 4h7.879a2 2 0 0 1 1.414.586l2.621 2.621A2 2 0 0 1 19 8.621V16"></path>
+                <path d="M9 9h6"></path>
+                <path d="M9 13h6"></path>
+              </svg>
+            </div>
+            <h3>Assessoria Contábil</h3>
+            <p>
+              Apoio técnico para rotinas contábeis, acompanhamento de obrigações e estruturação administrativa com mais previsibilidade.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"></path>
+                <path d="M9.5 12.5l1.7 1.7 3.6-3.9"></path>
+              </svg>
+            </div>
+            <h3>Consultoria Jurídica</h3>
+            <p>
+              Orientação para contratos, prevenção de riscos, formalizações e suporte legal alinhado à realidade empresarial.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M3 17l6-6 4 4 7-7"></path>
+                <path d="M14 8h6v6"></path>
+              </svg>
+            </div>
+            <h3>Planejamento Estratégico</h3>
+            <p>
+              Apoio consultivo para decisões mais seguras, com leitura prática de cenário, estrutura e crescimento sustentável.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="container about-wrap">
+        <div class="about-box reveal">
+          <div class="eyebrow">Sobre a Millenium</div>
+          <h2>Postura institucional que transmite confiança desde o primeiro acesso.</h2>
+          <p class="lead">
+            A proposta visual deste site foi construída para posicionar o escritório com sofisticação, credibilidade e sobriedade.
+          </p>
+
+          <div class="about-list">
+            <div class="about-item">
+              <div class="check">✓</div>
+              <div>
+                <h3>Comunicação clara</h3>
+                <p>Mensagem objetiva e elegante para apresentar os serviços com seriedade.</p>
+              </div>
+            </div>
+
+            <div class="about-item">
+              <div class="check">✓</div>
+              <div>
+                <h3>Visual premium</h3>
+                <p>Paleta em bege, marrom e preto, reforçando sofisticação e presença institucional.</p>
+              </div>
+            </div>
+
+            <div class="about-item">
+              <div class="check">✓</div>
+              <div>
+                <h3>Base pronta para expansão</h3>
+                <p>Depois você pode adicionar equipe, áreas de atuação, blog, artigos, FAQ e página própria de contato.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside id="diferenciais" class="about-panel reveal">
+          <div class="eyebrow">Diferenciais</div>
+          <h2>Uma presença digital alinhada ao perfil de um escritório sério.</h2>
+
+          <div class="numbers">
+            <div class="number-card">
+              <strong>01</strong>
+              <p>Design elegante para fortalecer percepção de valor e credibilidade.</p>
+            </div>
+            <div class="number-card">
+              <strong>02</strong>
+              <p>Navegação simples e objetiva, facilitando contato e apresentação institucional.</p>
+            </div>
+            <div class="number-card">
+              <strong>03</strong>
+              <p>Estrutura responsiva, funcionando bem em computador e celular.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-box reveal">
+          <div class="eyebrow" style="color:#f6e4cb;">Atendimento personalizado</div>
+          <h2 style="max-width: 900px; margin-bottom: 16px;">
+            Sua empresa merece acompanhamento com segurança, organização e visão estratégica.
+          </h2>
+          <p>
+            Esta landing page já está pronta para apresentar a Millenium LTDA de forma profissional. Com pequenos próximos passos, ela pode evoluir para um site institucional ainda mais robusto.
+          </p>
+
+          <div class="btns">
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/5592984869393?text=Olá%2C%20quero%20solicitar%20um%20atendimento."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Iniciar atendimento
+            </a>
+            <a class="btn btn-secondary" href="#contato" style="background: rgba(255,255,255,0.10); color:#fff6eb; border-color: rgba(255,255,255,0.14);">
+              Ver contato
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Contato</div>
+          <h2>Fale com a Millenium LTDA.</h2>
+          <p class="lead">
+            Você pode usar esta seção para captação imediata via WhatsApp ou por formulário.
+          </p>
+        </div>
+
+        <div class="grid contact-grid">
+          <div class="contact-card reveal">
+            <h3>Informações de contato</h3>
+            <p>
+              Atendimento rápido e direto para empresários, profissionais e interessados em suporte contábil e jurídico.
+            </p>
+
+            <div class="contact-items">
+              <div class="contact-item">
+                <small>WhatsApp</small>
+                <a
+                  href="https://wa.me/5592984869393?text=Olá%2C%20gostaria%20de%20mais%20informações."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  (92) 98486-9393
+                </a>
+              </div>
+
+              <div class="contact-item">
+                <small>E-mail</small>
+                <a href="mailto:contato@millenium-ltda.com.br">
+                  contato@millenium-ltda.com.br
+                </a>
+              </div>
+
+              <div class="contact-item">
+                <small>Domínio</small>
+                <span>millenium-ltda.com.br</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap reveal">
+            <h3>Solicite um retorno</h3>
+            <p>Este formulário pode ser integrado depois com e-mail, WhatsApp ou automação.</p>
+
+            <form onsubmit="handleSubmit(event)">
+              <div class="field">
+                <label for="nome">Nome</label>
+                <input id="nome" name="nome" type="text" placeholder="Seu nome" required />
+              </div>
+
+              <div class="field">
+                <label for="telefone">Telefone</label>
+                <input id="telefone" name="telefone" type="tel" placeholder="(00) 00000-0000" required />
+              </div>
+
+              <div class="field">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" placeholder="voce@exemplo.com" required />
+              </div>
+
+              <div class="field">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Descreva brevemente sua necessidade."></textarea>
+              </div>
+
+              <button class="btn btn-primary" type="submit">Enviar via WhatsApp</button>
+            </form>
+
+            <p class="note">
+              No momento, o botão do formulário redireciona a mensagem para o WhatsApp.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Millenium LTDA. Todos os direitos reservados.</p>
+      <p>Assessoria Contábil e Jurídica</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function handleSubmit(event) {
+      event.preventDefault();
+
+      const nome = document.getElementById("nome").value.trim();
+      const telefone = document.getElementById("telefone").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const mensagem = document.getElementById("mensagem").value.trim();
+
+      const texto =
+        `Olá, meu nome é ${nome}.%0A` +
+        `Telefone: ${telefone}%0A` +
+        `E-mail: ${email}%0A` +
+        `Mensagem: ${mensagem || "Não informada"}`;
+
+      const url = `https://wa.me/5592984869393?text=${texto}`;
+      window.open(url, "_blank");
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
